@@ -1,0 +1,392 @@
+{
+    "editor.fontSize": 16,
+    "editor.fontLigatures": true,
+    "editor.fontFamily": "SF Mono Ligatures, SF Mono, Menlo, Monaco, 'Courier New', monospace",
+    "tabnine.experimentalAutoImports": true,
+    "editor.renderControlCharacters": false,
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": [
+                    "comment"
+                ],
+                "settings": {
+                    "foreground": "#7982a0"
+                }
+            },
+            {
+                "scope": [
+                    "variable.parameter.dart"
+                ],
+                "settings": {
+                    "foreground": "#c2c2c2"
+                }
+            },
+            {
+                "scope": [
+                    "punctuation.definition.comment"
+                ],
+                "settings": {
+                    "foreground": "#6c748f"
+                }
+            },
+            {
+                "scope": [
+                    "source.dart"
+                ],
+                "settings": {
+                    "foreground": "#c2c2c2"
+                }
+            },
+            {
+                "scope": [
+                    "source.rust"
+                ],
+                "settings": {
+                    "foreground": "#c2c2c2"
+                }
+            },
+            {
+                "scope": [
+                    "keyword.operator.misc.rust"
+                ],
+                "settings": {
+                    "foreground": "#a7a6a6"
+                }
+            },
+            {
+                "scope": [
+                    "constant.numeric.integer.decimal.rust"
+                ],
+                "settings": {
+                    "foreground": "#E8BD7E"
+                }
+            },
+            {
+                "scope": [
+                    "meta.type_params.rust"
+                ],
+                "settings": {
+                    "foreground": "#EB9146"
+                }
+            },
+            {
+                "scope": [
+                    "entity.name.type.rust",
+                    "entity.name.type.dart",
+                ],
+                "settings": {
+                    "foreground": "#5ed1ee"
+                }
+            },
+            {
+                "scope": [
+                    "entity.name.function.rust",
+                    "entity.name.function.dart",
+                ],
+                "settings": {
+                    "foreground": "#7bb3f3"
+                }
+            },
+            {
+                "scope": [
+                    "entity.name.type"
+                ],
+                "settings": {
+                    "foreground": "#94d4e6"
+                }
+            },
+            {
+                "scope": [
+                    "entity.name.type.enum.rust"
+                ],
+                "settings": {
+                    "foreground": "#94d4e6"
+                }
+            },
+            {
+                "scope": [
+                    "entity.name.type.trait.rust"
+                ],
+                "settings": {
+                    "foreground": "#83aeff"
+                }
+            },
+            {
+                "scope": [
+                    "entity.name.function.macro.rust"
+                ],
+                "settings": {
+                    "foreground": "#e49e6c"
+                }
+            },
+            {
+                "scope": [
+                    "keyword.operator.sigil.rust"
+                ],
+                "settings": {
+                    "foreground": "#da9c62"
+                }
+            },
+            {
+                "scope": [
+                    "storage.modifier.lifetime.rust"
+                ],
+                "settings": {
+                    "foreground": "#da9c62"
+                }
+            },
+            {
+                "scope": [
+                    "entity.name.type.lifetime.rust"
+                ],
+                "settings": {
+                    "foreground": "#da9c62"
+                }
+            },
+            {
+                "scope": [
+                    "support.class.dart"
+                ],
+                "settings": {
+                    "foreground": "#e0bb75"
+                }
+            },
+            {
+                "scope": [
+                    "comment.line.double-slash.rust"
+                ],
+                "settings": {
+                    "foreground": "#597992"
+                }
+            },
+            {
+                "scope": [
+                    "storage.modifier.mut.rust"
+                ],
+                "settings": {
+                    "foreground": "#c277ce"
+                }
+            },
+            {
+                "scope": [
+                    "keyword.operator.borrow.and.rust"
+                ],
+                "settings": {
+                    "foreground": "#DB985C"
+                }
+            },
+            {
+                "scope": [
+                    "keyword.operator.dereference.rust"
+                ],
+                "settings": {
+                    "foreground": "#DA985C"
+                }
+            },
+            {
+                "scope": [
+                    "keyword.other.crate.rust"
+                ],
+                "settings": {
+                    "foreground": "#65be90"
+                }
+            },
+            {
+                "scope": [
+                    "punctuation.definition.string.template.begin.js",
+                    "punctuation.definition.string.template.end.js"
+                ],
+                "settings": {
+                    "foreground": "#07c900"
+                }
+            },
+        ]
+    },
+    "workbench.colorCustomizations": {
+        "titleBar.activeBackground": "#373737",
+        "titleBar.inactiveBackground": "#282829",
+        "activityBar.background": "#15171d",
+        "sideBar.background": "#0E0F16",
+        "minimap.background": "#0E0F16",
+        "editor.background": "#15171d",
+        "editorGroupHeader.tabsBackground": "#15171d",
+        "editorGroupHeader.noTabsBackground": "#15171d",
+        "editorGutter.background": "#15171d",
+        "editorLineNumber.foreground": "#5B626E",
+        "editorLineNumber.activeForeground": "#888C90",
+        "tab.activeBackground": "#2b313a",
+        "tab.inactiveBackground": "#15171d",
+        "tab.hoverBackground": "#22272e",
+        "list.hoverBackground": "#22272e",
+        "statusBar.background": "#15171d",
+        "sideBarSectionHeader.background": "#2b313a",
+        "breadcrumb.background": "#2b313a",
+        "breadcrumbPicker.background": "#2b313a",
+        "editorBracketMatch.border": "#666666",
+        "editor.foldBackground": "#171922",
+        "panel.background": "#0f0f0f",
+        "panelSectionHeader.background": "#0f0f0f",
+        "terminal.background": "#0f0f0f",
+        "terminal.foreground": "#cfcfcf",
+        "editorBracketHighlight.foreground1": "#C2C2C2",
+        "editorBracketHighlight.foreground2": "#C2C2C2",
+        "editorBracketHighlight.foreground3": "#C2C2C2",
+        "editorBracketHighlight.foreground4": "#C2C2C2",
+        "editorBracketHighlight.foreground5": "#C2C2C2",
+        "editorBracketHighlight.foreground6": "#C2C2C2",
+    },
+    "bracket-pair-colorizer-2.colors": [
+        "#C2C2C2",
+    ],
+    "bracket-pair-colorizer-2.scopeLineCSS": [
+        "borderStyle : solid",
+        "borderWidth : 1px",
+        "borderColor : {color}",
+        "opacity: 0.55"
+    ],
+    "workbench.colorTheme": "Atom One Dark",
+    "intelephense.format.braces": "k&r",
+    "explorer.confirmDelete": false,
+    "window.titleBarStyle": "native",
+    "window.doubleClickIconToClose": true,
+    "C_Cpp.vcFormat.newLine.beforeOpenBrace.block": "sameLine",
+    "C_Cpp.vcFormat.newLine.beforeOpenBrace.function": "sameLine",
+    "C_Cpp.vcFormat.newLine.beforeOpenBrace.lambda": "sameLine",
+    "C_Cpp.vcFormat.newLine.beforeOpenBrace.type": "sameLine",
+    // "editor.semanticTokenColorCustomizations": null,
+    "git.autofetch": true,
+    "terminal.integrated.fontFamily": "SF Mono Ligatures",
+    "terminal.integrated.fontSize": 15,
+    "git.enableSmartCommit": true,
+    "terminal.integrated.macOptionIsMeta": true,
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "html.format.contentUnformatted": "",
+    // "editor.codeActionsOnSave": null,
+    "[typescript]": {
+        "editor.formatOnType": true,
+        "editor.insertSpaces": true,
+        "editor.tabSize": 4
+    },
+    "explorer.confirmDragAndDrop": false,
+    "C_Cpp.updateChannel": "Insiders",
+    "editor.minimap.renderCharacters": false,
+    "workbench.editor.showTabs": true,
+    "angular-file-changer.openSideBySide": true,
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "editor.formatOnPaste": true,
+    "python.formatting.provider": "yapf",
+    "editor.accessibilitySupport": "off",
+    "[rust]": {
+        "editor.defaultFormatter": "matklad.rust-analyzer"
+    },
+    "editor.formatOnSave": true,
+    "editor.lineHeight": 25,
+    "[dockerfile]": {
+        "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+    },
+    "editor.formatOnType": true,
+    "terminal.integrated.lineHeight": 1.2,
+    "security.workspace.trust.untrustedFiles": "open",
+    "[dart]": {
+        "editor.tabSize": 2,
+        "editor.insertSpaces": false,
+        "editor.detectIndentation": false,
+        "editor.formatOnSave": true,
+        "editor.formatOnType": true,
+        "editor.rulers": [
+            100
+        ],
+        "editor.selectionHighlight": false,
+        "editor.suggest.snippetsPreventQuickSuggestions": false,
+        "editor.suggestSelection": "first",
+        "editor.tabCompletion": "onlySnippets",
+        "editor.wordBasedSuggestions": false,
+    },
+    "redhat.telemetry.enabled": false,
+    "search.smartCase": true,
+    "gitlens.statusBar.alignment": "left",
+    "gitlens.mode.statusBar.alignment": "left",
+    "workbench.tree.indent": 20,
+    "gitlens.views.commits.files.layout": "tree",
+    "editor.acceptSuggestionOnEnter": "smart",
+    "editor.quickSuggestionsDelay": 1,
+    "editor.suggest.preview": true,
+    "editor.inlineSuggest.enabled": true,
+    "emmet.showSuggestionsAsSnippets": true,
+    "editor.tabCompletion": "on",
+    "editor.suggest.shareSuggestSelections": true,
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": false,
+        "strings": false
+    },
+    "editor.suggestSelection": "recentlyUsedByPrefix",
+    "editor.suggest.localityBonus": true,
+    "gitlens.views.contributors.files.layout": "list",
+    "gitlens.views.stashes.files.layout": "list",
+    "gitlens.views.tags.files.layout": "list",
+    "gitlens.views.remotes.files.layout": "list",
+    "gitlens.views.branches.files.layout": "list",
+    "gitlens.views.searchAndCompare.files.layout": "list",
+    "dart.hotReloadProgress": "statusBar",
+    "dart.debugExternalLibraries": false,
+    "dart.debugSdkLibraries": false,
+    "dart.devToolsBrowser": "default",
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 100,
+    "dart.flutterHotReloadOnSave": "always",
+    "dart.lineLength": 100,
+    "evenBetterToml.formatter.columnWidth": 100,
+    "yaml.format.printWidth": 100,
+    "terminal.external.osxExec": "iTerm.app",
+    "terminal.integrated.commandsToSkipShell": [
+        "workbench.explorer.fileView.focus",
+        "outline.focus",
+        "workbench.panel.markers.view.focus",
+        "workbench.view.extension.test",
+        "workbench.actions.view.problems",
+        "workbench.debug.action.toggleRepl",
+        "workbench.action.output.toggleOutput"
+    ],
+    "liveshare.sharedTerminalWidth": 100,
+    "debug.console.fontSize": 15,
+    "debug.console.fontFamily": "SF Mono Ligatures, SF Mono, Menlo, Monaco, 'Courier New', monospace",
+    "debug.console.lineHeight": 20,
+    "gitlens.views.repositories.branches.layout": "list",
+    "editor.hover.delay": 150,
+    "workbench.hover.delay": 1200,
+    "workbench.startupEditor": "welcomePageInEmptyWorkbench",
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.minimap.side": "left",
+    "editor.minimap.enabled": false,
+    "breadcrumbs.enabled": false,
+    "editor.guides.bracketPairsHorizontal": true,
+    "editor.bracketPairColorization.enabled": true,
+    "bracket-pair-colorizer-2.depreciation-notice": false,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "workbench.activityBar.visible": false,
+    "dart.enableServerSnippets": true,
+    "[xml]": {
+        "editor.defaultFormatter": "redhat.vscode-xml"
+    },
+    "xmlTools.enableXmlTreeViewCursorSync": true,
+    "html.format.wrapAttributes": "force-aligned",
+    "xml.format.splitAttributesIndentSize": 1,
+    "xml.format.preserveAttributeLineBreaks": true,
+    "xml.format.closingBracketNewLine": true,
+    "editor.suggest.showWords": false,
+    // "editor.glyphMargin": false, // for breakpoints
+    // "editor.lineDecorationsWidth": 0, // undocumented
+}

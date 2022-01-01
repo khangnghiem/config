@@ -1,0 +1,307 @@
+{
+	// Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"final": {
+		"prefix": [
+			"final",
+		],
+		"body": [
+			"final $1;",
+		],
+		"description": "final"
+	},
+	"isnot": {
+		"prefix": [
+			"is not",
+			"isnot ",
+		],
+		"body": [
+			"!= ",
+		],
+		"description": "is not"
+	},
+	"if": {
+		"prefix": [
+			"if",
+			"if ",
+		],
+		"body": [
+			"if ($1) {",
+			"\t$2",
+			"}"
+		],
+		"description": "if"
+	},
+	"return": {
+		"prefix": [
+			"re",
+			"ret",
+			"retu",
+			"return",
+		],
+		"body": "return $1;",
+		"description": "return ;"
+	},
+	"todo": {
+		"prefix": [
+			"todo",
+			"td"
+		],
+		"body": "// TODO: $1",
+		"description": "TODO"
+	},
+	"todo1": {
+		"prefix": [
+			"todo1",
+			"td1"
+		],
+		"body": "// TODO 1: $1",
+		"description": "TODO 1"
+	},
+	"todo2": {
+		"prefix": [
+			"todo2",
+			"td2"
+		],
+		"body": "// TODO 2: $1",
+		"description": "TODO 2"
+	},
+	"todo3": {
+		"prefix": [
+			"todo3",
+			"td3"
+		],
+		"body": "// TODO 3: $1",
+		"description": "TODO 3"
+	},
+	"todo4": {
+		"prefix": [
+			"todo4",
+			"td4"
+		],
+		"body": "// TODO 4: $1",
+		"description": "TODO 4"
+	},
+	"todo5": {
+		"prefix": [
+			"todo5",
+			"td5"
+		],
+		"body": "// TODO 5: $1",
+		"description": "TODO 5"
+	},
+	"todo6": {
+		"prefix": [
+			"todo6",
+			"td6"
+		],
+		"body": "// TODO 6: $1",
+		"description": "TODO 6"
+	},
+	"todo7": {
+		"prefix": [
+			"todo7",
+			"td7"
+		],
+		"body": "// TODO 7: $1",
+		"description": "TODO 7"
+	},
+	"todo8": {
+		"prefix": [
+			"todo8",
+			"td8"
+		],
+		"body": "// TODO 8: $1",
+		"description": "TODO 8"
+	},
+	"todo9": {
+		"prefix": [
+			"todo9",
+			"td9"
+		],
+		"body": "// TODO 9: $1",
+		"description": "TODO 9"
+	},
+	"todo10": {
+		"prefix": [
+			"todo10",
+			"td10"
+		],
+		"body": "// TODO 10: $1",
+		"description": "TODO 10"
+	},
+	"todo11": {
+		"prefix": [
+			"todo11",
+			"td11"
+		],
+		"body": "// TODO 11: $1",
+		"description": "TODO 11"
+	},
+	"todo12": {
+		"prefix": [
+			"todo12",
+			"td12"
+		],
+		"body": "// TODO 12: $1",
+		"description": "TODO 12"
+	},
+	"todo13": {
+		"prefix": [
+			"todo13",
+			"td13"
+		],
+		"body": "// TODO 13: $1",
+		"description": "TODO 13"
+	},
+	"todo14": {
+		"prefix": [
+			"todo14",
+			"td14"
+		],
+		"body": "// TODO 14: $1",
+		"description": "TODO 14"
+	},
+	"todo15": {
+		"prefix": [
+			"todo15",
+			"td15"
+		],
+		"body": "// TODO 15: $1",
+		"description": "TODO 15"
+	},
+	"todo16": {
+		"prefix": [
+			"todo16",
+			"td16"
+		],
+		"body": "// TODO 16: $1",
+		"description": "TODO 16"
+	},
+	"todo17": {
+		"prefix": [
+			"todo17",
+			"td17"
+		],
+		"body": "// TODO 17: $1",
+		"description": "TODO 17"
+	},
+	"todo18": {
+		"prefix": [
+			"todo18",
+			"td18"
+		],
+		"body": "// TODO 18: $1",
+		"description": "TODO 18"
+	},
+	"todo19": {
+		"prefix": [
+			"todo19",
+			"td19"
+		],
+		"body": "// TODO 19: $1",
+		"description": "TODO 19"
+	},
+	"todo20": {
+		"prefix": [
+			"todo20",
+			"td20"
+		],
+		"body": "// TODO 20: $1",
+		"description": "TODO 20"
+	},
+	"todo21": {
+		"prefix": [
+			"todo21",
+			"td21"
+		],
+		"body": "// TODO 21: $1",
+		"description": "TODO 21"
+	},
+	"todo22": {
+		"prefix": [
+			"todo22",
+			"td22"
+		],
+		"body": "// TODO 22: $1",
+		"description": "TODO 22"
+	},
+	"todo23": {
+		"prefix": [
+			"todo23",
+			"td23"
+		],
+		"body": "// TODO 23: $1",
+		"description": "TODO 23"
+	},
+	"todo24": {
+		"prefix": [
+			"todo24",
+			"td24"
+		],
+		"body": "// TODO 24: $1",
+		"description": "TODO 24"
+	},
+	"todo25": {
+		"prefix": [
+			"todo25",
+			"td25"
+		],
+		"body": "// TODO 25: $1",
+		"description": "TODO 25"
+	},
+	"todo26": {
+		"prefix": [
+			"todo26",
+			"td26"
+		],
+		"body": "// TODO 26: $1",
+		"description": "TODO 26"
+	},
+	"todo27": {
+		"prefix": [
+			"todo27",
+			"td27"
+		],
+		"body": "// TODO 27: $1",
+		"description": "TODO 27"
+	},
+	"todo28": {
+		"prefix": [
+			"todo28",
+			"td28"
+		],
+		"body": "// TODO 28: $1",
+		"description": "TODO 28"
+	},
+	"todo29": {
+		"prefix": [
+			"todo29",
+			"td29"
+		],
+		"body": "// TODO 29: $1",
+		"description": "TODO 29"
+	},
+	"todo30": {
+		"prefix": [
+			"todo30",
+			"td30"
+		],
+		"body": "// TODO 30: $1",
+		"description": "TODO 30"
+	},
+}

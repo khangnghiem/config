@@ -1,0 +1,138 @@
+{
+  // delete to beginning of paragraph
+  "^u" = (moveToBeginningOfParagraphAndModifySelection:, delete:);
+  // delete to the end of paragraph
+  "^k" = (moveToEndOfParagraphAndModifySelection:, delete:); 
+  // delete word backward
+  "^~h" = (moveWordBackwardAndModifySelection:, delete:);
+  // delete word forward
+  "^~d" = (moveWordForwardAndModifySelection:, delete:);
+  // delete line
+  // "^D" = (moveToEndOfParagraphAndModifySelection:, moveRightAndModifySelection:, delete:);
+
+  // yank
+  "^y" = (yank:);
+
+  // bookmark
+  // "^," = (setMark:);
+  // jump to bookmark
+  // "^." = (swapWithMark:, centerSelectionInVisibleArea:);
+
+  // insert space \040
+  // "^\040" = (setMark:, moveLeft:, deleteToMark:, insertText:, " ", setMark:, yank:, selectToMark:);
+  // "^~\040" = (setMark:, moveRight:, insertText:, " ", swapWithMark:);
+  
+  // select to beginning of paragraph and copy
+  // "^A" = (moveToBeginningOfParagraphAndModifySelection:, copy:);
+  // select to end of paragraph and copy
+  // "^E" = (moveToEndOfParagraphAndModifySelection:, copy:);
+  // blank line before current
+  // "^~o" = (setMark:, moveToBeginningOfParagraph:, moveLeft:, insertNewline:, swapWithMark:);
+  // "^~m" = (setMark:, moveToEndOfParagraph:, moveRight:, insertNewline:, swapWithMark:);
+  
+  // Select line
+  "^~w" = (moveToBeginningOfLine:, moveToEndOfLineAndModifySelection:);
+  // Select paragraph
+  "^~W" = (selectParagraph:);
+  // Expand word selection
+  "^w" = (moveWordRightAndModifySelection:, setMark:, moveLeft:, moveWordLeft:, selectToMark:);
+  // Expand line selection
+  "^W" = (moveToBeginningOfParagraphAndModifySelection:, moveUpAndModifySelection:, moveToBeginningOfParagraphAndModifySelection:, setMark:, moveRight:, moveDown:, moveToEndOfParagraph:, selectToMark:);
+  // "^~." = (moveWordRightAndModifySelection:, setMark:, moveLeft:, moveWordLeft:, selectToMark:);
+  // Expand selection
+  // "^." = (moveRightAndModifySelection:, setMark:, moveLeft:, moveLeft:, moveLeft:, selectToMark:);
+  // Shrink word selection
+  // "^~," = (moveLeftAndModifySelection:, moveRightAndModifySelection:, moveWordRightAndModifySelection:, moveRightAndModifySelection:, setMark:, deleteToMark:, setMark:, yank:, moveWordLeft:, moveLeft:, selectToMark:);
+  // Shrink selection
+  // "^," = (moveLeftAndModifySelection:, moveRightAndModifySelection:, moveRightAndModifySelection:, setMark:, deleteToMark:, setMark:, yank:, moveLeft:, selectToMark:);
+
+  // lowercase word
+  "^Z" = (selectWord:, lowercaseWord:);
+  // titlecase word
+  "^X" = (selectWord:, capitalizeWord:);
+  // uppercase word
+  "^C" = (selectWord:, uppercaseWord:);
+
+  // Move selection up
+  "~\UF700" = (setMark:, moveRight:, deleteToMark:, moveUp:, setMark:, yank:, selectToMark:);
+  // Move selection down
+  "~\UF701" = (setMark:, moveLeft:, deleteToMark:, moveDown:, setMark:, yank:, selectToMark:);
+  // Move selection left
+  "~\UF702" = (setMark:, moveRight:, deleteToMark:, moveLeft:, setMark:, yank:, selectToMark:);
+  // Move selection right 
+  "~\UF703" = (setMark:, moveLeft:, deleteToMark:, moveRight:, setMark:, yank:, selectToMark:);
+  // "^t" = (setMark:, moveLeft:, deleteToMark:, moveRight:, setMark:, yank:, selectToMark:);
+  // Move selection left word
+  "^~j" = (setMark:, moveRight:, deleteToMark:, moveWordLeft:, setMark:, yank:, selectToMark:);
+  // Move selection right word
+  "^~;" = (setMark:, moveLeft:, deleteToMark:, moveWordRight:, setMark:, yank:, selectToMark:);
+  
+  // Move word left
+  "^j" = (moveWordLeft:);
+  // Move word right
+  "^;" = (moveWordRight:);
+  // Select word left 
+  "^J" = (moveWordBackwardAndModifySelection:);
+  // Select word right
+  "^:" = (moveWordForwardAndModifySelection:);
+  
+
+  // Move to beginning
+  // "^@j" = (moveToBeginningOfParagraph:);
+  // Move to end
+  // "^@;" = (moveToEndOfParagraph:);
+  // Select to beginning
+  // "^@J" = (moveToBeginningOfParagraphAndModifySelection:);
+  // Select to end
+  // "^@:" = (moveToEndOfParagraphAndModifySelection:);
+  // Move selection far left  
+  "^~a" = (setMark:, moveRight:, deleteToMark:, moveToBeginningOfParagraph:, setMark:, yank:, selectToMark:);
+  // Move selection far right
+  "^~e" = (setMark:, moveLeft:, deleteToMark:, moveToEndOfParagraph:, setMark:, yank:, selectToMark:);
+
+
+  // Move line up
+  //"^~t" = (selectParagraph:, setMark:, deleteToMark:, moveLeft:, moveToBeginningOfParagraph:, setMark:, yank:, moveLeft:, selectToMark:);
+  // Move line down
+  //"~\UF701" = (selectParagraph:, setMark:, deleteToMark:, moveToEndOfParagraph:, moveRight:, setMark:, yank:, moveLeft:, selectToMark:);
+
+    // wrap () left
+    "^@(" = (setMark:, moveLeft:, deleteToMark:, insertText:, "()", moveLeft:, setMark:, yank:, selectToMark:);
+    // wrap () right
+    "^@)" = (setMark:, moveRight:, deleteToMark:, insertText:, "()", moveLeft:, setMark:, yank:, selectToMark:);
+     // wrap {} with spaces
+    "^@{" = (setMark:, moveLeft:, deleteToMark:, insertText:, "{}", moveLeft:, setMark:, yank:, selectToMark:);
+    // wrap {} no spaces
+    "^@}" = (setMark:, moveRight:, deleteToMark:, insertText:, "{}", moveLeft:, setMark:, yank:, selectToMark:);
+    // wrap <> with spaces
+    "^@<" = (setMark:, moveLeft:, deleteToMark:, insertText:, "<>", moveLeft:, setMark:, yank:, selectToMark:);
+    // wrap <> no spaces
+    "^@>" = (setMark:, moveRight:, deleteToMark:, insertText:, "<>", moveLeft:, setMark:, yank:, selectToMark:);
+    // wrap single quotes
+    "^@'" = (setMark:, moveLeft:, deleteToMark:, insertText:, "''", moveLeft:, setMark:, yank:, selectToMark:);
+    // wrap slash 
+    // "^@/" = (setMark:, moveLeft:, deleteToMark:, insertText:, "//", moveLeft:, setMark:, yank:, selectToMark:);
+    // wrap double quote
+    "^@\"" = (setMark:, moveLeft:, deleteToMark:, insertText:, "\"\"", moveLeft:, setMark:, yank:, selectToMark:);
+
+  // Copy selection up
+  // "$@~\UF700" = (selectParagraph:, delete:, yankAndSelect:, moveToBeginningOfText:, yankAndSelect:);
+  "$~\UF700" = (copy:, moveToBeginningOfParagraph:, moveLeft:, insertNewlineIgnoringFieldEditor:, paste:, moveToBeginningOfParagraphAndModifySelection:);
+  // Copy selection down
+  // "$~\UF701" = (selectParagraph:, delete:, yank:, moveToBeginningOfParagraph:, yankAndSelect:)
+  "$~\UF701" = (copy:, moveToEndOfParagraph:, moveRight:, insertNewlineIgnoringFieldEditor:, moveLeft:, paste:, moveToBeginningOfParagraphAndModifySelection:);
+  // Copy selection left
+  // "$~\UF702" = (copy:, moveLeft:, insertText:, " ", moveLeft:, setMark:, paste:, selectToMark:);
+  "^~J" = (copy:, moveLeft:, insertText:, " ", moveLeft:, setMark:, paste:, selectToMark:);
+  // Copy selection right 
+  // "$~\UF703" = (copy:, moveRight:, insertText:, " ", setMark:, paste:, selectToMark:);
+  "^~:" = (copy:, moveRight:, insertText:, " ", setMark:, paste:, selectToMark:);
+  // Copy line up
+  // "$@~\UF700" = (selectParagraph:, delete:, yankAndSelect:, moveToBeginningOfText:, yankAndSelect:);
+  "$@~\UF700" = (moveToBeginningOfParagraph:, moveToEndOfParagraphAndModifySelection:, copy:, moveToBeginningOfParagraph:, moveLeft:, insertNewlineIgnoringFieldEditor:, paste:, moveToBeginningOfParagraphAndModifySelection:);
+  // Copy line down
+  // "$@~\UF701" = (selectParagraph:, delete:, yank:, moveToBeginningOfParagraph:, yankAndSelect:);
+  "$@~\UF701" = (moveToBeginningOfParagraph:, moveToEndOfParagraphAndModifySelection:, copy:, moveToEndOfParagraph:, moveRight:, insertNewlineIgnoringFieldEditor:, moveLeft:, paste:, moveToBeginningOfParagraphAndModifySelection:);
+
+
+}

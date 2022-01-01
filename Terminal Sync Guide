@@ -1,0 +1,20 @@
+//Terminal
+
+Install Oh-my-zsh, powerlevel10k
+
+in ~/.zshrc check:
+ZSH_THEME="powerlevel10k/powerlevel10k"
+
+//Run
+brew install zsh zsh-completions
+
+cd ~/.oh-my-zsh/custom/plugins
+
+git clone https://github.com/zsh-users/zsh-autosuggestions
+
+git clone https://github.com/zsh-users/zsh-syntax-highlighting
+
+//Update ~/.zshrc
+"plugins=(git zsh-autosuggestions zsh-syntax-highlighting)"
+
+brew install autojump
