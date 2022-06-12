@@ -31,6 +31,24 @@
         "command": "extension.toggleFiles"
     },
     {
+        "key": "cmd+[",
+        "command": "workbench.action.navigateBack"
+    },
+    {
+        "key": "cmd+]",
+        "command": "workbench.action.navigateForward"
+    },
+    {
+        "key": "alt+[",
+        "command": "editor.action.outdentLines",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "alt+]",
+        "command": "editor.action.indentLines",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
         "key": "ctrl+tab",
         "command": "workbench.action.nextEditorInGroup",
     },
@@ -160,13 +178,13 @@
     //     "command": "workbench.action.closeSidebar",
     //     "when": "filesExplorerFocus"
     // },
+    // {
+    //     "key": "ctrl+cmd+e",
+    //     "command": "editor.action.rename",
+    //     "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+    // },
     {
-        "key": "ctrl+cmd+e",
-        "command": "editor.action.rename",
-        "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "ctrl+cmd+a",
+        "key": "f3",
         "command": "editor.action.changeAll",
         "when": "editorTextFocus && editorTextFocus && !editorReadonly"
     },
@@ -240,9 +258,31 @@
         "command": "workbench.action.closeSidebar",
         "when": "workbench.scm.active && sideBarFocus && focusedView =~ /scm/"
     },
+    // {
+    //     "key": "ctrl+f19",
+    //     "command": "test-explorer.focus"
+    // },
     {
-        "key": "ctrl+cmd+f19",
-        "command": "workbench.view.testing.focus"
+        "key": "ctrl+f19",
+        "command": "outline.focus"
+    },
+    {
+        "key": "ctrl+f19",
+        "command": "workbench.action.closeAuxiliaryBar",
+        "when": "auxiliaryBarFocus"
+    },
+    {
+        "key": "cmd+shift+g",
+        "command": "workbench.scm.focus"
+    },
+    // {
+    //     "key": "ctrl+f19",
+    //     "command": "workbench.view.extension.test"
+    // },
+    {
+        "key": "ctrl+f19",
+        "command": "workbench.action.closeSidebar",
+        "when": "sideBarFocus && focusedView == 'workbench.view.testing'"
     },
     {
         "key": "ctrl+cmd+f19",
@@ -257,7 +297,7 @@
     //     "key": "ctrl+f4",
     // {
     //     "key": "ctrl+f1",
-    //     "command": "workbench.action.terminal.toggleTerminal",
+    //     "command": "workbench.action.terminal.toggleTerminal", 
     //     "when": "terminal.active"
     // },
     // {
@@ -298,10 +338,10 @@
         "key": "ctrl+f18",
         "command": "workbench.action.focusSecondEditorGroup"
     },
-    {
-        "key": "ctrl+f19",
-        "command": "workbench.action.focusThirdEditorGroup"
-    },
+    // {
+    //     "key": "ctrl+f19",
+    //     "command": "workbench.action.focusThirdEditorGroup"
+    // },
     {
         "key": "ctrl+alt+0",
         "command": "workbench.action.moveEditorToFirstGroup"
@@ -821,11 +861,11 @@
     },
     {
         "key": "ctrl+shift+w",
-        "command": "expand-selection-to-scope.expand"
+        "command": "editor.action.smartSelect.shrink"
     },
     {
         "key": "ctrl+alt+w",
-        "command": "expandLineSelection"
+        "command": "expand-selection-to-scope.expand"
     },
     {
         "key": "ctrl+[",
@@ -987,6 +1027,11 @@
         "when": "inSearchEditor && inputBoxFocus || inputBoxFocus && searchViewletVisible"
     },
     {
+        "key": "ctrl+cmd+a",
+        "command": "editor.foldRecursively",
+        "when": "editorTextFocus && foldingEnabled"
+    },
+    {
         "key": "ctrl+cmd+[",
         "command": "editor.fold",
         "when": "editorTextFocus && foldingEnabled"
@@ -997,8 +1042,21 @@
         "when": "notebookEditorFocused && !inputFocus && activeEditor == 'workbench.editor.notebook'"
     },
     {
+        "key": "ctrl+cmd+e",
+        "command": "editor.unfoldRecursively",
+        "when": "editorTextFocus && foldingEnabled"
+    },
+    {
         "key": "ctrl+cmd+]",
-        "command": "editor.unfoldAll"
+        "command": "editor.unfold"
+    },
+    {
+        "key": "cmd+left",
+        "command": "editor.fold",
+    },
+    {
+        "key": "cmd+right",
+        "command": "editor.unfold"
     },
     {
         "key": "ctrl+cmd+]",
@@ -1614,5 +1672,25 @@
     {
         "key": "cmd+b",
         "command": "-workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "alt+[",
+        "command": "-editor.action.inlineSuggest.showPrevious",
+        "when": "inlineSuggestionVisible && !editorReadonly"
+    },
+    {
+        "key": "cmd+[",
+        "command": "-editor.action.outdentLines",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "alt+]",
+        "command": "-editor.action.inlineSuggest.showNext",
+        "when": "inlineSuggestionVisible && !editorReadonly"
+    },
+    {
+        "key": "ctrl+f5",
+        "command": "-cmake.debugTarget",
+        "when": "cmake:enableFullFeatureSet && inCMakeProject && !cmake:hideDebugCommand && !inDebugMode"
     },
 ]
