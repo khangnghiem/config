@@ -17,14 +17,6 @@
             },
             {
                 "scope": [
-                    "variable.parameter.dart"
-                ],
-                "settings": {
-                    "foreground": "#c2c2c2"
-                }
-            },
-            {
-                "scope": [
                     "punctuation.definition.comment"
                 ],
                 "settings": {
@@ -207,20 +199,20 @@
     "workbench.colorCustomizations": {
         "titleBar.activeBackground": "#373737",
         "titleBar.inactiveBackground": "#282829",
-        "activityBar.background": "#15171d",
+        "activityBar.background": "#12141a",
         "sideBar.background": "#0E0F16",
         "minimap.background": "#0E0F16",
-        "editor.background": "#15171d",
-        "editorGroupHeader.tabsBackground": "#15171d",
-        "editorGroupHeader.noTabsBackground": "#15171d",
-        "editorGutter.background": "#15171d",
+        "editor.background": "#12141a",
+        "editorGroupHeader.tabsBackground": "#12141a",
+        "editorGroupHeader.noTabsBackground": "#12141a",
+        "editorGutter.background": "#12141a",
         "editorLineNumber.foreground": "#5B626E",
         "editorLineNumber.activeForeground": "#888C90",
         "tab.activeBackground": "#2b313a",
-        "tab.inactiveBackground": "#15171d",
+        "tab.inactiveBackground": "#12141a",
         "tab.hoverBackground": "#22272e",
         "list.hoverBackground": "#22272e",
-        "statusBar.background": "#15171d",
+        "statusBar.background": "#12141a",
         "sideBarSectionHeader.background": "#2b313a",
         "breadcrumb.background": "#2b313a",
         "breadcrumbPicker.background": "#2b313a",
@@ -269,11 +261,11 @@
     "[typescript]": {
         "editor.formatOnType": true,
         "editor.insertSpaces": true,
-        "editor.tabSize": 4
+        "editor.tabSize": 4,
+        "editor.defaultFormatter": "vscode.typescript-language-features"
     },
     "explorer.confirmDragAndDrop": false,
     "C_Cpp.updateChannel": "Insiders",
-    "editor.minimap.renderCharacters": false,
     "workbench.editor.showTabs": true,
     "angular-file-changer.openSideBySide": true,
     "[json]": {
@@ -309,15 +301,14 @@
         "editor.wordBasedSuggestions": false,
     },
     "redhat.telemetry.enabled": false,
+    "xml.format.closingBracketNewLine": true,
     "search.smartCase": true,
     "gitlens.statusBar.alignment": "left",
     "gitlens.mode.statusBar.alignment": "left",
     "workbench.tree.indent": 20,
     "gitlens.views.commits.files.layout": "tree",
-    "editor.acceptSuggestionOnEnter": "smart",
+    "editor.acceptSuggestionOnEnter": "off",
     "editor.quickSuggestionsDelay": 1,
-    "editor.suggest.preview": true,
-    "editor.inlineSuggest.enabled": true,
     "emmet.showSuggestionsAsSnippets": true,
     "editor.tabCompletion": "on",
     "editor.suggest.shareSuggestSelections": true,
@@ -360,7 +351,7 @@
     "debug.console.lineHeight": 20,
     "gitlens.views.repositories.branches.layout": "list",
     "editor.hover.delay": 150,
-    "workbench.hover.delay": 1200,
+    "workbench.hover.delay": 800,
     "workbench.startupEditor": "welcomePageInEmptyWorkbench",
     "files.exclude": {
         "**/.classpath": true,
@@ -369,24 +360,43 @@
         "**/.factorypath": true
     },
     "workbench.iconTheme": "material-icon-theme",
-    "editor.minimap.side": "left",
-    "editor.minimap.enabled": false,
-    "breadcrumbs.enabled": false,
+    "editor.suggest.showWords": false,
     "editor.guides.bracketPairsHorizontal": true,
     "editor.bracketPairColorization.enabled": true,
     "bracket-pair-colorizer-2.depreciation-notice": false,
     "editor.multiCursorModifier": "ctrlCmd",
-    "workbench.activityBar.visible": false,
-    "dart.enableServerSnippets": true,
-    "[xml]": {
-        "editor.defaultFormatter": "redhat.vscode-xml"
+    "dateTime.showAMPM": true,
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
     },
-    "xmlTools.enableXmlTreeViewCursorSync": true,
-    "html.format.wrapAttributes": "force-aligned",
-    "xml.format.splitAttributesIndentSize": 1,
-    "xml.format.preserveAttributeLineBreaks": true,
-    "xml.format.closingBracketNewLine": true,
-    "editor.suggest.showWords": false,
+    "material-ui-snippets.showNotesOnStartup": false,
+    "window.newWindowDimensions": "inherit",
+    "html.format.wrapLineLength": 100,
+    "editor.minimap.maxColumn": 100,
+    "editor.minimap.renderCharacters": false,
+    "editor.minimap.showSlider": "always",
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "editor.minimap.enabled": false,
+    "editor.suggest.showInlineDetails": false,
+    "editor.suggest.preview": true,
+    "dart.hotReloadOnSave": "always",
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 1200,
+    "breadcrumbs.enabled": false,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "terminal.integrated.env.osx": {
+        "FIG_NEW_SESSION": "1"
+    },
+    "workbench.activityBar.visible": false,
+    // "eslint.options": {
+    //     "overrideConfigFile": ".eslintrc.json"
+    // },
+    // "editor.defaultFormatter": "esbenp.prettier-vscode",
+    // "editor.codeActionsOnSave": {
+    //     "source.fixAll.eslint": true
+    // }
     // "editor.glyphMargin": false, // for breakpoints
     // "editor.lineDecorationsWidth": 0, // undocumented
 }

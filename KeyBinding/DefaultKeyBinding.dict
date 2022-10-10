@@ -37,12 +37,12 @@
   // Expand word selection
   "^w" = (moveWordRightAndModifySelection:, setMark:, moveLeft:, moveWordLeft:, selectToMark:);
   // Expand line selection
-  "^W" = (moveToBeginningOfParagraphAndModifySelection:, moveUpAndModifySelection:, moveToBeginningOfParagraphAndModifySelection:, setMark:, moveRight:, moveDown:, moveToEndOfParagraph:, selectToMark:);
+  // "^W" = (moveToBeginningOfParagraphAndModifySelection:, moveUpAndModifySelection:, moveToBeginningOfParagraphAndModifySelection:, setMark:, moveRight:, moveDown:, moveToEndOfParagraph:, selectToMark:);
   // "^~." = (moveWordRightAndModifySelection:, setMark:, moveLeft:, moveWordLeft:, selectToMark:);
   // Expand selection
   // "^." = (moveRightAndModifySelection:, setMark:, moveLeft:, moveLeft:, moveLeft:, selectToMark:);
   // Shrink word selection
-  // "^~," = (moveLeftAndModifySelection:, moveRightAndModifySelection:, moveWordRightAndModifySelection:, moveRightAndModifySelection:, setMark:, deleteToMark:, setMark:, yank:, moveWordLeft:, moveLeft:, selectToMark:);
+  "^W" = (moveLeftAndModifySelection:, moveRightAndModifySelection:, moveWordRightAndModifySelection:, moveRightAndModifySelection:, setMark:, deleteToMark:, setMark:, yank:, moveWordLeft:, moveLeft:, selectToMark:);
   // Shrink selection
   // "^," = (moveLeftAndModifySelection:, moveRightAndModifySelection:, moveRightAndModifySelection:, setMark:, deleteToMark:, setMark:, yank:, moveLeft:, selectToMark:);
 
@@ -58,9 +58,9 @@
   // Move selection down
   "~\UF701" = (setMark:, moveLeft:, deleteToMark:, moveDown:, setMark:, yank:, selectToMark:);
   // Move selection left
-  "~\UF702" = (setMark:, moveRight:, deleteToMark:, moveLeft:, setMark:, yank:, selectToMark:);
+  "^j" = (setMark:, moveRight:, deleteToMark:, moveLeft:, setMark:, yank:, selectToMark:);
   // Move selection right 
-  "~\UF703" = (setMark:, moveLeft:, deleteToMark:, moveRight:, setMark:, yank:, selectToMark:);
+  "^;" = (setMark:, moveLeft:, deleteToMark:, moveRight:, setMark:, yank:, selectToMark:);
   // "^t" = (setMark:, moveLeft:, deleteToMark:, moveRight:, setMark:, yank:, selectToMark:);
   // Move selection left word
   "^~j" = (setMark:, moveRight:, deleteToMark:, moveWordLeft:, setMark:, yank:, selectToMark:);
@@ -68,13 +68,13 @@
   "^~;" = (setMark:, moveLeft:, deleteToMark:, moveWordRight:, setMark:, yank:, selectToMark:);
   
   // Move word left
-  "^j" = (moveWordLeft:);
+  "~\UF702" = (moveWordLeft:);
   // Move word right
-  "^;" = (moveWordRight:);
+  "~\UF703" = (moveWordRight:);
   // Select word left 
-  "^J" = (moveWordBackwardAndModifySelection:);
+  "$^\UF702" = (moveWordBackwardAndModifySelection:);
   // Select word right
-  "^:" = (moveWordForwardAndModifySelection:);
+  "$^\UF703" = (moveWordForwardAndModifySelection:);
   
 
   // Move to beginning
@@ -116,10 +116,8 @@
     "^@\"" = (setMark:, moveLeft:, deleteToMark:, insertText:, "\"\"", moveLeft:, setMark:, yank:, selectToMark:);
 
   // Copy selection up
-  // "$@~\UF700" = (selectParagraph:, delete:, yankAndSelect:, moveToBeginningOfText:, yankAndSelect:);
   "$~\UF700" = (copy:, moveToBeginningOfParagraph:, moveLeft:, insertNewlineIgnoringFieldEditor:, paste:, moveToBeginningOfParagraphAndModifySelection:);
   // Copy selection down
-  // "$~\UF701" = (selectParagraph:, delete:, yank:, moveToBeginningOfParagraph:, yankAndSelect:)
   "$~\UF701" = (copy:, moveToEndOfParagraph:, moveRight:, insertNewlineIgnoringFieldEditor:, moveLeft:, paste:, moveToBeginningOfParagraphAndModifySelection:);
   // Copy selection left
   // "$~\UF702" = (copy:, moveLeft:, insertText:, " ", moveLeft:, setMark:, paste:, selectToMark:);
@@ -128,11 +126,7 @@
   // "$~\UF703" = (copy:, moveRight:, insertText:, " ", setMark:, paste:, selectToMark:);
   "^~:" = (copy:, moveRight:, insertText:, " ", setMark:, paste:, selectToMark:);
   // Copy line up
-  // "$@~\UF700" = (selectParagraph:, delete:, yankAndSelect:, moveToBeginningOfText:, yankAndSelect:);
   "$@~\UF700" = (moveToBeginningOfParagraph:, moveToEndOfParagraphAndModifySelection:, copy:, moveToBeginningOfParagraph:, moveLeft:, insertNewlineIgnoringFieldEditor:, paste:, moveToBeginningOfParagraphAndModifySelection:);
   // Copy line down
-  // "$@~\UF701" = (selectParagraph:, delete:, yank:, moveToBeginningOfParagraph:, yankAndSelect:);
   "$@~\UF701" = (moveToBeginningOfParagraph:, moveToEndOfParagraphAndModifySelection:, copy:, moveToEndOfParagraph:, moveRight:, insertNewlineIgnoringFieldEditor:, moveLeft:, paste:, moveToBeginningOfParagraphAndModifySelection:);
-
-
 }
