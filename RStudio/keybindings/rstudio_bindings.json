@@ -1,0 +1,13 @@
+{
+    "newSourceDoc": "Cmd+N",
+    "newSession": "Shift+Cmd+N",
+    "activateSource": "Ctrl+8",
+    "showCommandPalette": "Ctrl+G",
+    "consoleClear": "Cmd+K",
+    "focusConsoleOutputEnd": "Ctrl+`",
+    "reformatCode": "Alt+Shift+F",
+    "expandToMatching": "Ctrl+Shift+M||",
+    "expandSelection": "Ctrl+W",
+    "goToDefinition": "Ctrl+I",
+    "copyLinesDown": "Alt+Shift+Down"
+}

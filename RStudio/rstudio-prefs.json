@@ -1,0 +1,14 @@
+{
+    "initial_working_directory": "~",
+    "posix_terminal_shell": "bash",
+    "jobs_tab_visibility": "shown",
+    "auto_detect_indentation": true,
+    "auto_save_on_blur": true,
+    "show_help_tooltip_on_idle": true,
+    "tab_multiline_completion": true,
+    "font_size_points": 12,
+    "editor_theme": "Dracula",
+    "insert_native_pipe_operator": true,
+    "code_completion_characters": 2,
+    "code_completion_delay": 50
+}
