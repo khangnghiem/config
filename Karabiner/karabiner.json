@@ -4,7 +4,8 @@
         "show_in_menu_bar": true,
         "show_profile_name_in_menu_bar": false
     },
-    "profiles": [{
+    "profiles": [
+        {
             "complex_modifications": {
                 "parameters": {
                     "basic.simultaneous_threshold_milliseconds": 30,
@@ -13,201 +14,146 @@
                     "basic.to_if_held_down_threshold_milliseconds": 100,
                     "mouse_motion_to_scroll.speed": 100
                 },
-                "rules": [{
-                        "description": "Change caps_lock to left_control if pressed with other keys, to escape if pressed alone",
-                        "manipulators": [{
-                            "from": {
-                                "key_code": "caps_lock",
-                                "modifiers": {
-                                    "optional": [
-                                        "any"
-                                    ]
-                                }
-                            },
-                            "to": [{
-                                "key_code": "left_control"
-                            }],
-                            "to_if_alone": [{
-                                "key_code": "escape"
-                            }],
-                            "type": "basic"
-                        }]
-                    },
+                "rules": [
                     {
-                        "description": "Change return_or_enter to control if pressed with other keys, to return_or_enter if pressed alone",
-                        "manipulators": [{
-                            "from": {
-                                "key_code": "return_or_enter",
-                                "modifiers": {
-                                    "optional": [
-                                        "any"
-                                    ]
-                                }
-                            },
-                            "to": [{
-                                "key_code": "right_control"
-                            }],
-                            "to_if_alone": [{
-                                "key_code": "return_or_enter"
-                            }],
-                            "type": "basic"
-                        }]
+                        "description": "Change caps_lock to left_control if pressed with other keys, to escape if pressed alone",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "caps_lock",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_control"
+                                    }
+                                ],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "escape"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
                     },
                     {
                         "description": "Change left_control to command+control+option+shift if pressed with other keys, to eject if pressed alone",
-                        "manipulators": [{
-                            "from": {
-                                "key_code": "left_control",
-                                "modifiers": {
-                                    "optional": [
-                                        "any"
-                                    ]
-                                }
-                            },
-                            "to": [{
-                                "key_code": "left_shift",
-                                "modifiers": [
-                                    "left_command",
-                                    "left_control",
-                                    "left_option"
-                                ]
-                            }],
-                            "to_if_alone": [{
-                                "key_code": "eject"
-                            }],
-                            "type": "basic"
-                        }]
-                    },
-                    {
-                        "description": "Change left_arrow to command+control+option+shift if pressed with other keys, to left_arrow if pressed alone",
-                        "manipulators": [{
-                            "from": {
-                                "key_code": "left_arrow",
-                                "modifiers": {
-                                    "optional": [
-                                        "any"
-                                    ]
-                                }
-                            },
-                            "to": [{
-                                "key_code": "left_shift",
-                                "modifiers": [
-                                    "left_command",
-                                    "left_control",
-                                    "left_option"
-                                ]
-                            }],
-                            "to_if_alone": [{
-                                "key_code": "left_arrow"
-                            }],
-                            "type": "basic"
-                        }]
-                    },
-                    {
-                        "description": "Change right_arrow to fn if pressed with other keys, to right_arrow if pressed alone",
-                        "manipulators": [{
-                            "from": {
-                                "key_code": "right_arrow",
-                                "modifiers": {
-                                    "optional": [
-                                        "any"
-                                    ]
-                                }
-                            },
-                            "to": [{
-                                "key_code": "fn"
-                            }],
-                            "to_if_alone": [{
-                                "key_code": "right_arrow"
-                            }],
-                            "type": "basic"
-                        }]
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "left_control",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_shift",
+                                        "modifiers": [
+                                            "left_command",
+                                            "left_control",
+                                            "left_option"
+                                        ]
+                                    }
+                                ],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "eject"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
                     },
                     {
                         "description": "Change right_control to command+control+option+shift if pressed with other keys, to eject if pressed alone",
-                        "manipulators": [{
-                            "from": {
-                                "key_code": "right_control",
-                                "modifiers": {
-                                    "optional": [
-                                        "any"
-                                    ]
-                                }
-                            },
-                            "to": [{
-                                "key_code": "right_shift",
-                                "modifiers": [
-                                    "right_command",
-                                    "right_control",
-                                    "right_option"
-                                ]
-                            }],
-                            "to_if_alone": [{
-                                "key_code": "eject"
-                            }],
-                            "type": "basic"
-                        }]
-                    },
-                    {
-                        "description": "Change keypad_enter to right_control if pressed with other keys, to keypad_enter if pressed alone",
-                        "manipulators": [{
-                            "from": {
-                                "key_code": "keypad_enter",
-                                "modifiers": {
-                                    "optional": [
-                                        "any"
-                                    ]
-                                }
-                            },
-                            "to": [{
-                                "key_code": "right_control"
-                            }],
-                            "to_if_alone": [{
-                                "key_code": "return_or_enter"
-                            }],
-                            "type": "basic"
-                        }]
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "right_control",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "right_shift",
+                                        "modifiers": [
+                                            "right_command",
+                                            "right_control",
+                                            "right_option"
+                                        ]
+                                    }
+                                ],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "eject"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
                     },
                     {
                         "description": "Change keypad_enter to return_or_enter",
-                        "manipulators": [{
-                            "from": {
-                                "key_code": "keypad_enter",
-                                "modifiers": {
-                                    "optional": [
-                                        "any"
-                                    ]
-                                }
-                            },
-                            "to": [{
-                                "key_code": "return_or_enter"
-                            }],
-                            "type": "basic"
-                        }]
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "keypad_enter",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "return_or_enter"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
                     },
                     {
                         "description": "Change keypad_0 to right_command if pressed alone",
-                        "manipulators": [{
-                            "from": {
-                                "key_code": "keypad_0",
-                                "modifiers": {
-                                    "optional": [
-                                        "any"
-                                    ]
-                                }
-                            },
-                            "to": [{
-                                "key_code": "right_command"
-                            }],
-                            "to_if_alone": [{
-                                "key_code": "keypad_0"
-                            }],
-                            "type": "basic"
-                        }]
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "keypad_0",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "right_command"
+                                    }
+                                ],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "keypad_0"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
                     },
                     {
                         "description": "Emacs key bindings [control+keys] (rev 10)",
-                        "manipulators": [{
+                        "manipulators": [
+                            {
                                 "from": {
                                     "key_code": "s",
                                     "modifiers": {
@@ -222,9 +168,11 @@
                                         ]
                                     }
                                 },
-                                "to": [{
-                                    "key_code": "left_arrow"
-                                }],
+                                "to": [
+                                    {
+                                        "key_code": "left_arrow"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
@@ -242,9 +190,11 @@
                                         ]
                                     }
                                 },
-                                "to": [{
-                                    "key_code": "right_arrow"
-                                }],
+                                "to": [
+                                    {
+                                        "key_code": "right_arrow"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
@@ -262,9 +212,11 @@
                                         ]
                                     }
                                 },
-                                "to": [{
-                                    "key_code": "delete_or_backspace"
-                                }],
+                                "to": [
+                                    {
+                                        "key_code": "delete_or_backspace"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
@@ -282,9 +234,11 @@
                                         ]
                                     }
                                 },
-                                "to": [{
-                                    "key_code": "down_arrow"
-                                }],
+                                "to": [
+                                    {
+                                        "key_code": "down_arrow"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
@@ -302,9 +256,11 @@
                                         ]
                                     }
                                 },
-                                "to": [{
-                                    "key_code": "up_arrow"
-                                }],
+                                "to": [
+                                    {
+                                        "key_code": "up_arrow"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
@@ -321,9 +277,11 @@
                                         ]
                                     }
                                 },
-                                "to": [{
-                                    "key_code": "up_arrow"
-                                }],
+                                "to": [
+                                    {
+                                        "key_code": "up_arrow"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
@@ -340,9 +298,11 @@
                                         ]
                                     }
                                 },
-                                "to": [{
-                                    "key_code": "page_up"
-                                }],
+                                "to": [
+                                    {
+                                        "key_code": "page_up"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
@@ -359,9 +319,11 @@
                                         ]
                                     }
                                 },
-                                "to": [{
-                                    "key_code": "page_down"
-                                }],
+                                "to": [
+                                    {
+                                        "key_code": "page_down"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
@@ -374,9 +336,11 @@
                                         ]
                                     }
                                 },
-                                "to": [{
-                                    "key_code": "home"
-                                }],
+                                "to": [
+                                    {
+                                        "key_code": "home"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
@@ -389,9 +353,11 @@
                                         ]
                                     }
                                 },
-                                "to": [{
-                                    "key_code": "end"
-                                }],
+                                "to": [
+                                    {
+                                        "key_code": "end"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
@@ -408,16 +374,19 @@
                                         ]
                                     }
                                 },
-                                "to": [{
-                                    "key_code": "return_or_enter"
-                                }],
+                                "to": [
+                                    {
+                                        "key_code": "return_or_enter"
+                                    }
+                                ],
                                 "type": "basic"
                             }
                         ]
                     }
                 ]
             },
-            "devices": [{
+            "devices": [
+                {
                     "disable_built_in_keyboard_if_exists": false,
                     "fn_function_keys": [],
                     "identifiers": {
@@ -470,101 +439,126 @@
                     "simple_modifications": []
                 }
             ],
-            "fn_function_keys": [{
+            "fn_function_keys": [
+                {
                     "from": {
                         "key_code": "f1"
                     },
-                    "to": [{
-                        "consumer_key_code": "display_brightness_decrement"
-                    }]
+                    "to": [
+                        {
+                            "consumer_key_code": "display_brightness_decrement"
+                        }
+                    ]
                 },
                 {
                     "from": {
                         "key_code": "f2"
                     },
-                    "to": [{
-                        "consumer_key_code": "display_brightness_increment"
-                    }]
+                    "to": [
+                        {
+                            "consumer_key_code": "display_brightness_increment"
+                        }
+                    ]
                 },
                 {
                     "from": {
                         "key_code": "f3"
                     },
-                    "to": [{
-                        "key_code": "mission_control"
-                    }]
+                    "to": [
+                        {
+                            "key_code": "mission_control"
+                        }
+                    ]
                 },
                 {
                     "from": {
                         "key_code": "f4"
                     },
-                    "to": [{
-                        "key_code": "launchpad"
-                    }]
+                    "to": [
+                        {
+                            "key_code": "launchpad"
+                        }
+                    ]
                 },
                 {
                     "from": {
                         "key_code": "f5"
                     },
-                    "to": [{
-                        "key_code": "illumination_decrement"
-                    }]
+                    "to": [
+                        {
+                            "key_code": "illumination_decrement"
+                        }
+                    ]
                 },
                 {
                     "from": {
                         "key_code": "f6"
                     },
-                    "to": [{
-                        "key_code": "illumination_increment"
-                    }]
+                    "to": [
+                        {
+                            "key_code": "illumination_increment"
+                        }
+                    ]
                 },
                 {
                     "from": {
                         "key_code": "f7"
                     },
-                    "to": [{
-                        "consumer_key_code": "rewind"
-                    }]
+                    "to": [
+                        {
+                            "consumer_key_code": "rewind"
+                        }
+                    ]
                 },
                 {
                     "from": {
                         "key_code": "f8"
                     },
-                    "to": [{
-                        "consumer_key_code": "play_or_pause"
-                    }]
+                    "to": [
+                        {
+                            "consumer_key_code": "play_or_pause"
+                        }
+                    ]
                 },
                 {
                     "from": {
                         "key_code": "f9"
                     },
-                    "to": [{
-                        "consumer_key_code": "fast_forward"
-                    }]
+                    "to": [
+                        {
+                            "consumer_key_code": "fast_forward"
+                        }
+                    ]
                 },
                 {
                     "from": {
                         "key_code": "f10"
                     },
-                    "to": [{
-                        "consumer_key_code": "mute"
-                    }]
+                    "to": [
+                        {
+                            "consumer_key_code": "mute"
+                        }
+                    ]
                 },
                 {
                     "from": {
                         "key_code": "f11"
                     },
-                    "to": [{
-                        "consumer_key_code": "volume_decrement"
-                    }]
+                    "to": [
+                        {
+                            "consumer_key_code": "volume_decrement"
+                        }
+                    ]
                 },
                 {
                     "from": {
                         "key_code": "f12"
                     },
-                    "to": [{
-                        "consumer_key_code": "volume_increment"
-                    }]
+                    "to": [
+                        {
+                            "consumer_key_code": "volume_increment"
+                        }
+                    ]
                 }
             ],
             "name": "Khang's MacBook Pro Touchbar",
@@ -572,21 +566,26 @@
                 "delay_milliseconds_before_open_device": 1000
             },
             "selected": false,
-            "simple_modifications": [{
+            "simple_modifications": [
+                {
                     "from": {
                         "key_code": "keypad_hyphen"
                     },
-                    "to": [{
-                        "key_code": "hyphen"
-                    }]
+                    "to": [
+                        {
+                            "key_code": "hyphen"
+                        }
+                    ]
                 },
                 {
                     "from": {
                         "key_code": "keypad_slash"
                     },
-                    "to": [{
-                        "key_code": "slash"
-                    }]
+                    "to": [
+                        {
+                            "key_code": "slash"
+                        }
+                    ]
                 }
             ],
             "virtual_hid_keyboard": {
@@ -604,201 +603,146 @@
                     "basic.to_if_held_down_threshold_milliseconds": 150,
                     "mouse_motion_to_scroll.speed": 100
                 },
-                "rules": [{
-                        "description": "Change caps_lock to left_control if pressed with other keys, to escape if pressed alone",
-                        "manipulators": [{
-                            "from": {
-                                "key_code": "caps_lock",
-                                "modifiers": {
-                                    "optional": [
-                                        "any"
-                                    ]
-                                }
-                            },
-                            "to": [{
-                                "key_code": "left_control"
-                            }],
-                            "to_if_alone": [{
-                                "key_code": "escape"
-                            }],
-                            "type": "basic"
-                        }]
-                    },
+                "rules": [
                     {
-                        "description": "Change return_or_enter to control if pressed with other keys, to return_or_enter if pressed alone",
-                        "manipulators": [{
-                            "from": {
-                                "key_code": "return_or_enter",
-                                "modifiers": {
-                                    "optional": [
-                                        "any"
-                                    ]
-                                }
-                            },
-                            "to": [{
-                                "key_code": "right_control"
-                            }],
-                            "to_if_alone": [{
-                                "key_code": "return_or_enter"
-                            }],
-                            "type": "basic"
-                        }]
+                        "description": "Change caps_lock to left_control if pressed with other keys, to escape if pressed alone",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "caps_lock",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_control"
+                                    }
+                                ],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "escape"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
                     },
                     {
                         "description": "Change left_control to command+control+option+shift if pressed with other keys, to eject if pressed alone",
-                        "manipulators": [{
-                            "from": {
-                                "key_code": "left_control",
-                                "modifiers": {
-                                    "optional": [
-                                        "any"
-                                    ]
-                                }
-                            },
-                            "to": [{
-                                "key_code": "left_shift",
-                                "modifiers": [
-                                    "left_command",
-                                    "left_control",
-                                    "left_option"
-                                ]
-                            }],
-                            "to_if_alone": [{
-                                "key_code": "eject"
-                            }],
-                            "type": "basic"
-                        }]
-                    },
-                    {
-                        "description": "Change left_arrow to command+control+option+shift if pressed with other keys, to left_arrow if pressed alone",
-                        "manipulators": [{
-                            "from": {
-                                "key_code": "left_arrow",
-                                "modifiers": {
-                                    "optional": [
-                                        "any"
-                                    ]
-                                }
-                            },
-                            "to": [{
-                                "key_code": "left_shift",
-                                "modifiers": [
-                                    "left_command",
-                                    "left_control",
-                                    "left_option"
-                                ]
-                            }],
-                            "to_if_alone": [{
-                                "key_code": "left_arrow"
-                            }],
-                            "type": "basic"
-                        }]
-                    },
-                    {
-                        "description": "Change right_arrow to fn if pressed with other keys, to right_arrow if pressed alone",
-                        "manipulators": [{
-                            "from": {
-                                "key_code": "right_arrow",
-                                "modifiers": {
-                                    "optional": [
-                                        "any"
-                                    ]
-                                }
-                            },
-                            "to": [{
-                                "key_code": "fn"
-                            }],
-                            "to_if_alone": [{
-                                "key_code": "right_arrow"
-                            }],
-                            "type": "basic"
-                        }]
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "left_control",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_shift",
+                                        "modifiers": [
+                                            "left_command",
+                                            "left_control",
+                                            "left_option"
+                                        ]
+                                    }
+                                ],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "eject"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
                     },
                     {
                         "description": "Change right_control to command+control+option+shift if pressed with other keys, to eject if pressed alone",
-                        "manipulators": [{
-                            "from": {
-                                "key_code": "right_control",
-                                "modifiers": {
-                                    "optional": [
-                                        "any"
-                                    ]
-                                }
-                            },
-                            "to": [{
-                                "key_code": "right_shift",
-                                "modifiers": [
-                                    "right_command",
-                                    "right_control",
-                                    "right_option"
-                                ]
-                            }],
-                            "to_if_alone": [{
-                                "key_code": "eject"
-                            }],
-                            "type": "basic"
-                        }]
-                    },
-                    {
-                        "description": "Change keypad_enter to right_control if pressed with other keys, to keypad_enter if pressed alone",
-                        "manipulators": [{
-                            "from": {
-                                "key_code": "keypad_enter",
-                                "modifiers": {
-                                    "optional": [
-                                        "any"
-                                    ]
-                                }
-                            },
-                            "to": [{
-                                "key_code": "right_control"
-                            }],
-                            "to_if_alone": [{
-                                "key_code": "return_or_enter"
-                            }],
-                            "type": "basic"
-                        }]
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "right_control",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "right_shift",
+                                        "modifiers": [
+                                            "right_command",
+                                            "right_control",
+                                            "right_option"
+                                        ]
+                                    }
+                                ],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "eject"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
                     },
                     {
                         "description": "Change keypad_enter to return_or_enter",
-                        "manipulators": [{
-                            "from": {
-                                "key_code": "keypad_enter",
-                                "modifiers": {
-                                    "optional": [
-                                        "any"
-                                    ]
-                                }
-                            },
-                            "to": [{
-                                "key_code": "return_or_enter"
-                            }],
-                            "type": "basic"
-                        }]
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "keypad_enter",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "return_or_enter"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
                     },
                     {
                         "description": "Change keypad_0 to right_command if pressed alone",
-                        "manipulators": [{
-                            "from": {
-                                "key_code": "keypad_0",
-                                "modifiers": {
-                                    "optional": [
-                                        "any"
-                                    ]
-                                }
-                            },
-                            "to": [{
-                                "key_code": "right_command"
-                            }],
-                            "to_if_alone": [{
-                                "key_code": "keypad_0"
-                            }],
-                            "type": "basic"
-                        }]
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "keypad_0",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "right_command"
+                                    }
+                                ],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "keypad_0"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
                     },
                     {
                         "description": "Emacs key bindings [control+keys] (rev 10)",
-                        "manipulators": [{
+                        "manipulators": [
+                            {
                                 "from": {
                                     "key_code": "s",
                                     "modifiers": {
@@ -813,9 +757,11 @@
                                         ]
                                     }
                                 },
-                                "to": [{
-                                    "key_code": "left_arrow"
-                                }],
+                                "to": [
+                                    {
+                                        "key_code": "left_arrow"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
@@ -833,9 +779,11 @@
                                         ]
                                     }
                                 },
-                                "to": [{
-                                    "key_code": "right_arrow"
-                                }],
+                                "to": [
+                                    {
+                                        "key_code": "right_arrow"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
@@ -853,9 +801,11 @@
                                         ]
                                     }
                                 },
-                                "to": [{
-                                    "key_code": "delete_or_backspace"
-                                }],
+                                "to": [
+                                    {
+                                        "key_code": "delete_or_backspace"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
@@ -873,9 +823,11 @@
                                         ]
                                     }
                                 },
-                                "to": [{
-                                    "key_code": "down_arrow"
-                                }],
+                                "to": [
+                                    {
+                                        "key_code": "down_arrow"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
@@ -893,9 +845,11 @@
                                         ]
                                     }
                                 },
-                                "to": [{
-                                    "key_code": "up_arrow"
-                                }],
+                                "to": [
+                                    {
+                                        "key_code": "up_arrow"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
@@ -912,9 +866,11 @@
                                         ]
                                     }
                                 },
-                                "to": [{
-                                    "key_code": "up_arrow"
-                                }],
+                                "to": [
+                                    {
+                                        "key_code": "up_arrow"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
@@ -931,9 +887,11 @@
                                         ]
                                     }
                                 },
-                                "to": [{
-                                    "key_code": "page_up"
-                                }],
+                                "to": [
+                                    {
+                                        "key_code": "page_up"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
@@ -950,9 +908,11 @@
                                         ]
                                     }
                                 },
-                                "to": [{
-                                    "key_code": "page_down"
-                                }],
+                                "to": [
+                                    {
+                                        "key_code": "page_down"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
@@ -965,9 +925,11 @@
                                         ]
                                     }
                                 },
-                                "to": [{
-                                    "key_code": "home"
-                                }],
+                                "to": [
+                                    {
+                                        "key_code": "home"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
@@ -980,9 +942,11 @@
                                         ]
                                     }
                                 },
-                                "to": [{
-                                    "key_code": "end"
-                                }],
+                                "to": [
+                                    {
+                                        "key_code": "end"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
@@ -1000,16 +964,19 @@
                                         ]
                                     }
                                 },
-                                "to": [{
-                                    "key_code": "return_or_enter"
-                                }],
+                                "to": [
+                                    {
+                                        "key_code": "return_or_enter"
+                                    }
+                                ],
                                 "type": "basic"
                             }
                         ]
                     }
                 ]
             },
-            "devices": [{
+            "devices": [
+                {
                     "disable_built_in_keyboard_if_exists": false,
                     "fn_function_keys": [],
                     "identifiers": {
@@ -1062,101 +1029,126 @@
                     "simple_modifications": []
                 }
             ],
-            "fn_function_keys": [{
+            "fn_function_keys": [
+                {
                     "from": {
                         "key_code": "f1"
                     },
-                    "to": [{
-                        "consumer_key_code": "display_brightness_decrement"
-                    }]
+                    "to": [
+                        {
+                            "consumer_key_code": "display_brightness_decrement"
+                        }
+                    ]
                 },
                 {
                     "from": {
                         "key_code": "f2"
                     },
-                    "to": [{
-                        "consumer_key_code": "display_brightness_increment"
-                    }]
+                    "to": [
+                        {
+                            "consumer_key_code": "display_brightness_increment"
+                        }
+                    ]
                 },
                 {
                     "from": {
                         "key_code": "f3"
                     },
-                    "to": [{
-                        "key_code": "mission_control"
-                    }]
+                    "to": [
+                        {
+                            "key_code": "mission_control"
+                        }
+                    ]
                 },
                 {
                     "from": {
                         "key_code": "f4"
                     },
-                    "to": [{
-                        "key_code": "launchpad"
-                    }]
+                    "to": [
+                        {
+                            "key_code": "launchpad"
+                        }
+                    ]
                 },
                 {
                     "from": {
                         "key_code": "f5"
                     },
-                    "to": [{
-                        "key_code": "illumination_decrement"
-                    }]
+                    "to": [
+                        {
+                            "key_code": "illumination_decrement"
+                        }
+                    ]
                 },
                 {
                     "from": {
                         "key_code": "f6"
                     },
-                    "to": [{
-                        "key_code": "illumination_increment"
-                    }]
+                    "to": [
+                        {
+                            "key_code": "illumination_increment"
+                        }
+                    ]
                 },
                 {
                     "from": {
                         "key_code": "f7"
                     },
-                    "to": [{
-                        "consumer_key_code": "rewind"
-                    }]
+                    "to": [
+                        {
+                            "consumer_key_code": "rewind"
+                        }
+                    ]
                 },
                 {
                     "from": {
                         "key_code": "f8"
                     },
-                    "to": [{
-                        "consumer_key_code": "play_or_pause"
-                    }]
+                    "to": [
+                        {
+                            "consumer_key_code": "play_or_pause"
+                        }
+                    ]
                 },
                 {
                     "from": {
                         "key_code": "f9"
                     },
-                    "to": [{
-                        "consumer_key_code": "fast_forward"
-                    }]
+                    "to": [
+                        {
+                            "consumer_key_code": "fast_forward"
+                        }
+                    ]
                 },
                 {
                     "from": {
                         "key_code": "f10"
                     },
-                    "to": [{
-                        "consumer_key_code": "mute"
-                    }]
+                    "to": [
+                        {
+                            "consumer_key_code": "mute"
+                        }
+                    ]
                 },
                 {
                     "from": {
                         "key_code": "f11"
                     },
-                    "to": [{
-                        "consumer_key_code": "volume_decrement"
-                    }]
+                    "to": [
+                        {
+                            "consumer_key_code": "volume_decrement"
+                        }
+                    ]
                 },
                 {
                     "from": {
                         "key_code": "f12"
                     },
-                    "to": [{
-                        "consumer_key_code": "volume_increment"
-                    }]
+                    "to": [
+                        {
+                            "consumer_key_code": "volume_increment"
+                        }
+                    ]
                 }
             ],
             "name": "Khang's Emacs Config",
@@ -1164,29 +1156,36 @@
                 "delay_milliseconds_before_open_device": 1000
             },
             "selected": true,
-            "simple_modifications": [{
+            "simple_modifications": [
+                {
                     "from": {
                         "key_code": "keypad_equal_sign"
                     },
-                    "to": [{
-                        "key_code": "equal_sign"
-                    }]
+                    "to": [
+                        {
+                            "key_code": "equal_sign"
+                        }
+                    ]
                 },
                 {
                     "from": {
                         "key_code": "keypad_hyphen"
                     },
-                    "to": [{
-                        "key_code": "hyphen"
-                    }]
+                    "to": [
+                        {
+                            "key_code": "hyphen"
+                        }
+                    ]
                 },
                 {
                     "from": {
                         "key_code": "keypad_slash"
                     },
-                    "to": [{
-                        "key_code": "slash"
-                    }]
+                    "to": [
+                        {
+                            "key_code": "slash"
+                        }
+                    ]
                 }
             ],
             "virtual_hid_keyboard": {
