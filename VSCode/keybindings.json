@@ -1,6 +1,15 @@
 // Place your key bindings in this file to override the defaultsauto[]
 [
     {
+        "key": "alt+x",
+        "command": "rainbow-csv.Align"
+    },
+    {
+        "key": "alt+shift+x",
+        "command": "rainbow-csv.Shrink",
+        "when": "editorTextFocus"
+    },
+    {
         "key": "ctrl+k",
         "command": "workbench.debug.panel.action.clearReplAction",
         "when": "inDebugRepl"
@@ -1701,5 +1710,34 @@
     {
         "key": "cmd+p",
         "command": "workbench.action.quickOpen"
+    },
+    {
+        "key": "ctrl+cmd+enter",
+        "command": "notebook.cell.insertMarkdownCellBelow"
+    },
+    {
+        "key": "ctrl+k .",
+        "command": "-extension.clipToHtml",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+k t",
+        "command": "-extension.insertToc",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+k ,",
+        "command": "-extension.saveToHtml",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+c alt+l",
+        "command": "-commentAnchors.navigateToAnchor",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+s",
+        "command": "-gitlens.showQuickRepoStatus",
+        "when": "!gitlens:disabled && config.gitlens.keymap == 'alternate'"
     },
 ]

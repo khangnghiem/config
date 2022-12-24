@@ -150,7 +150,7 @@
                     "comment.line.double-slash.rust"
                 ],
                 "settings": {
-                    "foreground": "#597992"
+                    "foreground": "#85a0b5"
                 }
             },
             {
@@ -275,7 +275,7 @@
     "python.formatting.provider": "yapf",
     "editor.accessibilitySupport": "off",
     "[rust]": {
-        "editor.defaultFormatter": "matklad.rust-analyzer"
+        "editor.defaultFormatter": "rust-lang.rust-analyzer"
     },
     "editor.formatOnSave": true,
     "editor.lineHeight": 25,
@@ -307,7 +307,6 @@
     "gitlens.mode.statusBar.alignment": "left",
     "workbench.tree.indent": 20,
     "gitlens.views.commits.files.layout": "tree",
-    "editor.acceptSuggestionOnEnter": "off",
     "editor.quickSuggestionsDelay": 1,
     "emmet.showSuggestionsAsSnippets": true,
     "editor.tabCompletion": "on",
@@ -343,21 +342,22 @@
         "workbench.view.extension.test",
         "workbench.actions.view.problems",
         "workbench.debug.action.toggleRepl",
-        "workbench.action.output.toggleOutput"
+        "workbench.action.output.toggleOutput",
+        "language-julia.interrupt"
     ],
     "liveshare.sharedTerminalWidth": 100,
     "debug.console.fontSize": 15,
     "debug.console.fontFamily": "SF Mono Ligatures, SF Mono, Menlo, Monaco, 'Courier New', monospace",
     "debug.console.lineHeight": 20,
     "gitlens.views.repositories.branches.layout": "list",
-    "editor.hover.delay": 150,
+    "editor.hover.delay": 100,
     "workbench.hover.delay": 800,
     "workbench.startupEditor": "welcomePageInEmptyWorkbench",
     "files.exclude": {
-        "**/.classpath": true,
-        "**/.project": true,
-        "**/.settings": true,
-        "**/.factorypath": true
+        "**/.classpath": false,
+        "**/.project": false,
+        "**/.settings": false,
+        "**/.factorypath": false
     },
     "workbench.iconTheme": "material-icon-theme",
     "editor.suggest.showWords": false,
@@ -389,7 +389,23 @@
     "terminal.integrated.env.osx": {
         "FIG_NEW_SESSION": "1"
     },
-    "workbench.activityBar.visible": false,
+    "files.associations": {
+        "*.rmd": "markdown"
+    },
+    "r.editor.formatOnType": true,
+    "julia.symbolCacheDownload": true,
+    "mdmath.macros": {
+        "\\vect": "{\\mathbf{\\boldsymbol{{#1}}}}"
+    },
+    "julia.enableTelemetry": false,
+    "[julia]": {
+        "editor.defaultFormatter": "0h7z.vscode-julia-format"
+    },
+    "path-intellisense.autoTriggerNextSuggestion": true,
+    "julia.focusPlotNavigator": true,
+    "julia.execution.inlineResultsForCellEvaluation": true,
+    "julia-format.flag": "style = DefaultStyle(), indent = 4, margin = 256, always_for_in = true, whitespace_typedefs = true, import_to_using = true, align_struct_field = true, align_assignment = true, align_conditional = true, align_pair_arrow = true, normalize_line_endings = \"unix\", align_matrix = true, join_lines_based_on_source = true, indent_submodule = true, surround_whereop_typeparameters = false, remove_extra_newlines = true, long_to_short_function_def = tru",
+    "workbench.activityBar.visible": false
     // "eslint.options": {
     //     "overrideConfigFile": ".eslintrc.json"
     // },
