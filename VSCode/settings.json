@@ -2,7 +2,13 @@
     "editor.fontSize": 16,
     "editor.fontLigatures": true,
     "editor.fontFamily": "SF Mono Ligatures, SF Mono, Menlo, Monaco, 'Courier New', monospace",
-    "tabnine.experimentalAutoImports": true,
+    "chat.editor.fontSize": 16,
+    "editor.lineHeight": 26,
+    "debug.console.fontSize": 15,
+    "debug.console.fontFamily": "SF Mono Ligatures, SF Mono, Menlo, Monaco, 'Courier New', monospace",
+    "debug.console.lineHeight": 20,
+    "terminal.integrated.fontFamily": "SF Mono Ligatures",
+    "terminal.integrated.fontSize": 15,
     "editor.renderControlCharacters": false,
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "editor.tokenColorCustomizations": {
@@ -203,7 +209,8 @@
         "sideBar.background": "#0E0F16",
         "minimap.background": "#0E0F16",
         "editor.background": "#12141a",
-        "editorGroupHeader.tabsBackground": "#12141a",
+        "editor.wordHighlightBackground": "#7166854c",
+        "editorGroupHeader.tabsBackground": "#13121a",
         "editorGroupHeader.noTabsBackground": "#12141a",
         "editorGutter.background": "#12141a",
         "editorLineNumber.foreground": "#5B626E",
@@ -217,7 +224,7 @@
         "breadcrumb.background": "#2b313a",
         "breadcrumbPicker.background": "#2b313a",
         "editorBracketMatch.border": "#666666",
-        "editor.foldBackground": "#171922",
+        // "editor.foldBackground": "#171922",
         "panel.background": "#0f0f0f",
         "panelSectionHeader.background": "#0f0f0f",
         "terminal.background": "#0f0f0f",
@@ -228,6 +235,8 @@
         "editorBracketHighlight.foreground4": "#C2C2C2",
         "editorBracketHighlight.foreground5": "#C2C2C2",
         "editorBracketHighlight.foreground6": "#C2C2C2",
+        "editor.lineHighlightBackground": "#1073cf2d",
+        "editor.lineHighlightBorder": "#9fced11f"
     },
     "bracket-pair-colorizer-2.colors": [
         "#C2C2C2",
@@ -249,8 +258,6 @@
     "C_Cpp.vcFormat.newLine.beforeOpenBrace.type": "sameLine",
     // "editor.semanticTokenColorCustomizations": null,
     "git.autofetch": true,
-    "terminal.integrated.fontFamily": "SF Mono Ligatures",
-    "terminal.integrated.fontSize": 15,
     "git.enableSmartCommit": true,
     "terminal.integrated.macOptionIsMeta": true,
     "[html]": {
@@ -265,8 +272,7 @@
         "editor.defaultFormatter": "vscode.typescript-language-features"
     },
     "explorer.confirmDragAndDrop": false,
-    "C_Cpp.updateChannel": "Insiders",
-    "workbench.editor.showTabs": true,
+    "workbench.editor.showTabs": "multiple",
     "angular-file-changer.openSideBySide": true,
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"
@@ -277,29 +283,12 @@
     "[rust]": {
         "editor.defaultFormatter": "rust-lang.rust-analyzer"
     },
-    "editor.formatOnSave": true,
-    "editor.lineHeight": 25,
     "[dockerfile]": {
         "editor.defaultFormatter": "ms-azuretools.vscode-docker"
     },
     "editor.formatOnType": true,
-    "terminal.integrated.lineHeight": 1.2,
+    "terminal.integrated.lineHeight": 1.3,
     "security.workspace.trust.untrustedFiles": "open",
-    "[dart]": {
-        "editor.tabSize": 2,
-        "editor.insertSpaces": false,
-        "editor.detectIndentation": false,
-        "editor.formatOnSave": true,
-        "editor.formatOnType": true,
-        "editor.rulers": [
-            100
-        ],
-        "editor.selectionHighlight": false,
-        "editor.suggest.snippetsPreventQuickSuggestions": false,
-        "editor.suggestSelection": "first",
-        "editor.tabCompletion": "onlySnippets",
-        "editor.wordBasedSuggestions": false,
-    },
     "redhat.telemetry.enabled": false,
     "xml.format.closingBracketNewLine": true,
     "search.smartCase": true,
@@ -307,7 +296,7 @@
     "gitlens.mode.statusBar.alignment": "left",
     "workbench.tree.indent": 20,
     "gitlens.views.commits.files.layout": "tree",
-    "editor.quickSuggestionsDelay": 1,
+    "editor.quickSuggestionsDelay": 2000,
     "emmet.showSuggestionsAsSnippets": true,
     "editor.tabCompletion": "on",
     "editor.suggest.shareSuggestSelections": true,
@@ -328,12 +317,11 @@
     "dart.debugExternalLibraries": false,
     "dart.debugSdkLibraries": false,
     "dart.devToolsBrowser": "default",
-    "editor.wordWrap": "wordWrapColumn",
-    "editor.wordWrapColumn": 100,
-    "dart.flutterHotReloadOnSave": "always",
+    "editor.wordWrapColumn": 120,
+    "dart.flutterHotReloadOnSave": "allIfDirty",
     "dart.lineLength": 100,
     "evenBetterToml.formatter.columnWidth": 100,
-    "yaml.format.printWidth": 100,
+    "yaml.format.printWidth": 120,
     "terminal.external.osxExec": "iTerm.app",
     "terminal.integrated.commandsToSkipShell": [
         "workbench.explorer.fileView.focus",
@@ -346,66 +334,75 @@
         "language-julia.interrupt"
     ],
     "liveshare.sharedTerminalWidth": 100,
-    "debug.console.fontSize": 15,
-    "debug.console.fontFamily": "SF Mono Ligatures, SF Mono, Menlo, Monaco, 'Courier New', monospace",
-    "debug.console.lineHeight": 20,
     "gitlens.views.repositories.branches.layout": "list",
-    "editor.hover.delay": 100,
+    "editor.hover.delay": 500,
     "workbench.hover.delay": 800,
     "workbench.startupEditor": "welcomePageInEmptyWorkbench",
     "files.exclude": {
-        "**/.classpath": false,
-        "**/.project": false,
-        "**/.settings": false,
-        "**/.factorypath": false
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
     },
     "workbench.iconTheme": "material-icon-theme",
     "editor.suggest.showWords": false,
     "editor.guides.bracketPairsHorizontal": true,
     "editor.bracketPairColorization.enabled": true,
     "bracket-pair-colorizer-2.depreciation-notice": false,
-    "editor.multiCursorModifier": "ctrlCmd",
     "dateTime.showAMPM": true,
     "[javascript]": {
         "editor.defaultFormatter": "vscode.typescript-language-features"
     },
     "material-ui-snippets.showNotesOnStartup": false,
     "window.newWindowDimensions": "inherit",
-    "html.format.wrapLineLength": 100,
     "editor.minimap.maxColumn": 100,
     "editor.minimap.renderCharacters": false,
     "editor.minimap.showSlider": "always",
     "[jsonc]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
-    "editor.minimap.enabled": false,
     "editor.suggest.showInlineDetails": false,
     "editor.suggest.preview": true,
-    "dart.hotReloadOnSave": "always",
-    "files.autoSave": "afterDelay",
+    "dart.hotReloadOnSave": "allIfDirty",
+    "files.autoSave": "onFocusChange",
     "files.autoSaveDelay": 1200,
-    "breadcrumbs.enabled": false,
     "javascript.updateImportsOnFileMove.enabled": "always",
     "terminal.integrated.env.osx": {
         "FIG_NEW_SESSION": "1"
     },
     "files.associations": {
-        "*.rmd": "markdown"
+        "*.rmd": "rmd",
+        "*.Rmd": "rmd"
     },
     "r.editor.formatOnType": true,
     "julia.symbolCacheDownload": true,
     "mdmath.macros": {
         "\\vect": "{\\mathbf{\\boldsymbol{{#1}}}}"
     },
-    "julia.enableTelemetry": false,
-    "[julia]": {
-        "editor.defaultFormatter": "0h7z.vscode-julia-format"
-    },
     "path-intellisense.autoTriggerNextSuggestion": true,
     "julia.focusPlotNavigator": true,
     "julia.execution.inlineResultsForCellEvaluation": true,
     "julia-format.flag": "style = DefaultStyle(), indent = 4, margin = 256, always_for_in = true, whitespace_typedefs = true, import_to_using = true, align_struct_field = true, align_assignment = true, align_conditional = true, align_pair_arrow = true, normalize_line_endings = \"unix\", align_matrix = true, join_lines_based_on_source = true, indent_submodule = true, surround_whereop_typeparameters = false, remove_extra_newlines = true, long_to_short_function_def = tru",
-    "workbench.activityBar.visible": false
+    "julia.trace.server": "messages",
+    "blockman.n01LineHeight": 0,
+    "diffEditor.wordWrap": "off",
+    "editor.inlayHints.enabled": "off",
+    "editor.guides.bracketPairs": false,
+    "rainbow_csv.csv_lint_detect_trailing_spaces": true,
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "[python]": {
+        "editor.formatOnType": true,
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    },
+    "black-formatter.args": [
+        "--line-length=150",
+        "--skip-string-normalization"
+    ],
+    "editor.stickyScroll.enabled": true,
+    "bracket-pair-colorizer-2.highlightActiveScope": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll": "explicit"
+    },
     // "eslint.options": {
     //     "overrideConfigFile": ".eslintrc.json"
     // },
@@ -415,4 +412,304 @@
     // }
     // "editor.glyphMargin": false, // for breakpoints
     // "editor.lineDecorationsWidth": 0, // undocumented
+    "security.workspace.trust.enabled": false,
+    "[dart]": {
+        "editor.tabSize": 2,
+        "editor.insertSpaces": false,
+        "editor.detectIndentation": false,
+        "editor.formatOnSave": true,
+        "editor.formatOnType": true,
+        "editor.rulers": [
+            100
+        ],
+        "editor.selectionHighlight": false,
+        "editor.suggest.snippetsPreventQuickSuggestions": false,
+        "editor.suggestSelection": "first",
+        "editor.tabCompletion": "onlySnippets",
+        "editor.wordBasedSuggestions": "off",
+        "editor.codeActionsOnSave": {
+            "source.fixAll": "explicit"
+        },
+    },
+    "dart.warnWhenEditingFilesOutsideWorkspace": false,
+    "dart.renameFilesWithClasses": "prompt",
+    "editor.inlineSuggest.enabled": true,
+    "explorer.fileNesting.patterns": {
+        "*.dart": "${capture}.g.dart, ${capture}.freezed.dart"
+    },
+    "explorer.fileNesting.enabled": true,
+    "dart.previewFlutterUiGuides": true,
+    "dart.previewFlutterUiGuidesCustomTracking": true,
+    "flutter-preview.port": 60583,
+    "flutter-preview.target": "lib/main.dart",
+    "dart.previewHotReloadOnSaveWatcher": true,
+    "editor.acceptSuggestionOnEnter": "off",
+    "plantuml.render": "Local",
+    "plantuml.server": "https://www.plantuml.com/plantuml",
+    "plantuml.urlFormat": "svg",
+    "plantuml.previewSnapIndicators": true,
+    "window.zoomLevel": 1,
+    "explorer.fileNesting.expand": false,
+    "hediet.vscode-drawio.resizeImages": null,
+    "markdown-mermaid.darkModeTheme": "base",
+    "hediet.vscode-drawio.codeLinkActivated": true,
+    "hediet.vscode-drawio.theme": "Kennedy",
+    "[markdown]": {
+        "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+    },
+    "gitdoc.enabled": true,
+    "gitdoc.filePattern": "/Users/khangnghiem/notes/**/*.{md,svg,html,png,gif,jpg,jpeg}",
+    "gitdoc.pushMode": "push",
+    "gitdoc.commitOnClose": true,
+    "gitdoc.autoPushDelay": 90000,
+    "gitdoc.pullOnOpen": true,
+    "gitdoc.commitValidationLevel": "warning",
+    "gitdoc.autoPull": "onCommit",
+    "gitdoc.autoPullDelay": 30000,
+    "gitdoc.autoCommitDelay": 90000,
+    "markdown.copyFiles.destination": {
+        "**/*": "./images/${documentBaseName}.png"
+    },
+    "editor.experimental.pasteActions.enabled": true,
+    "markdown.extension.tableFormatter.normalizeIndentation": true,
+    "markdownlint.config": {
+        "MD007": false,
+        "MD022": false,
+        "MD025": false,
+        "MD031": false,
+        "MD032": false,
+        "MD033": false,
+        "MD036": false,
+        "MD041": false,
+        "MD045": false
+    },
+    "fontAwesomeAutocomplete.patterns": [
+        "**/*.html",
+        "**/*.md"
+    ],
+    "git.fetchOnPull": true,
+    "git.ignoreRebaseWarning": true,
+    "git.pullBeforeCheckout": true,
+    "git.postCommitCommand": "sync",
+    "git.mergeEditor": true,
+    "git.useCommitInputAsStashMessage": true,
+    "git.confirmSync": false,
+    "zenMode.centerLayout": false,
+    "svg.preview.autoShow": true,
+    "markdown-preview-enhanced.automaticallyShowPreviewOfMarkdownBeingEdited": true,
+    // "runOnSave.statusMessageTimeout": 3000,
+    // "runOnSave.commands": [
+    //     {
+    //         "globMatch": "**/*.dart",
+    //         "command": "flutter test",
+    //         "runningStatusMessage": "Flutter test ${fileBasename}",
+    //         "finishStatusMessage": "${fileBasename} completed",
+    //         "runIn": "terminal"
+    //     }
+    // ],
+    "markdown.preview.fontSize": 18,
+    "preview.preview.fontSize": 18,
+    "markdown-preview-enhanced.enableScriptExecution": true,
+    "markdown-preview-enhanced.enableHTML5Embed": true,
+    "markdown-preview-enhanced.frontMatterRenderingOption": "code block",
+    "[sql]": {
+        "editor.defaultFormatter": "inferrinizzard.prettier-sql-vscode"
+    },
+    "application.shellEnvironmentResolutionTimeout": 12,
+    "pgsql.connections": [
+        {
+            "host": "localhost",
+            "dbname": "postgres",
+            "user": "postgres",
+            "password": "",
+            "emptyPasswordInput": false,
+            "port": "5432",
+            "connectTimeout": 15,
+            "encrypt": false,
+            "applicationName": "vscode-pgsql",
+            "hostaddr": "",
+            "options": "",
+            "sslmode": "prefer",
+            "clientEncoding": "",
+            "sslcompression": true,
+            "sslcert": "",
+            "sslkey": "",
+            "sslrootcert": "",
+            "sslcrl": "",
+            "requirepeer": ""
+        }
+    ],
+    "AREPL.keepPreviousVars": true,
+    "AREPL.pyGuiLibraries": [
+        "matplotlib",
+        "tkinter",
+        "kivy",
+        "pyforms",
+        "PyQt4",
+        "PyQt5",
+        "wx",
+        "pyside",
+        "plotly",
+        "ggplot",
+        "bokeh",
+        "ppb",
+        "PySimpleGUI",
+        "pyglet"
+    ],
+    "AREPL.pythonPath": "",
+    "python.venvPath": "~/.pyenv",
+    "AREPL.skipLandingPage": true,
+    "python.terminal.activateEnvInCurrentTerminal": true,
+    "python.globalModuleInstallation": true,
+    "python.analysis.autoImportCompletions": true,
+    "autoDocstring.startOnNewLine": true,
+    "AREPL.delay": 200,
+    "AREPL.envFile": "",
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "AREPL.whenToExecute": "onKeybinding",
+    "python.analysis.autoFormatStrings": true,
+    "codeium.enableConfig": {
+        "*": true,
+        "django-html": true,
+        "python": false
+    },
+    "[django-html]": {
+        "editor.defaultFormatter": "monosans.djlint"
+    },
+    "textPowerTools.customLocale": "vi-VN",
+    "workbench.editorAssociations": {
+        "*.copilotmd": "vscode.markdown.preview.editor",
+        "*.parquet": "parquetExplorer.explorer",
+        "*.sql": "sql-notebook",
+        "*.csv": "default"
+    },
+    "[query-editor]": {
+        "editor.defaultFormatter": "yy0931.vscode-sqlite3-editor"
+    },
+    "editor.snippetSuggestions": "bottom",
+    "insertDateString.format": "YYYY-MM-DD hh:mm:ss",
+    "insertDateString.formatDate": "MMM D, YYYY",
+    "insertDateString.formatTime": "hh:mm:ss",
+    "window.commandCenter": false,
+    "workbench.layoutControl.enabled": false,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "continue.enableTabAutocomplete": false,
+    "wolf.disableHotModeWarning": true,
+    "[shellscript]": {
+        "editor.defaultFormatter": "foxundermoon.shell-format"
+    },
+    "gitlens.ai.experimental.model": "anthropic:claude-3-5-sonnet-20240620",
+    "breadcrumbs.enabled": false,
+    "git.openRepositoryInParentFolders": "never",
+    "[r]": {
+        "editor.defaultFormatter": "REditorSupport.r"
+    },
+    "sqltools.useNodeRuntime": true,
+    "r.plot.defaults.fullWindowMode": true,
+    "chat.editing.alwaysSaveWithGeneratedChanges": true,
+    "[toml]": {
+        "editor.defaultFormatter": "tamasfe.even-better-toml"
+    },
+    "[rmd]": {
+        "editor.defaultFormatter": "REditorSupport.r"
+    },
+    "markdown-preview-enhanced.usePandocParser": true,
+    "ruff.lint.ignore": [
+        "E402"
+    ],
+    "editor.unicodeHighlight.invisibleCharacters": false,
+    "dataWrangler.experiments.autoDetectCsvDelimiter": true,
+    "Prettier-SQL.expressionWidth": 100,
+    "Prettier-SQL.keywordCase": "upper",
+    "dbcode.connections": [
+        {
+            "connectionId": "QdOj_6Ol3sg0WmyM8UNCf",
+            "name": "data",
+            "driver": "duckdb",
+            "socket": "/Volumes/Seagate/Filen/data/data.db",
+            "readOnly": false,
+            "connectionType": "socket"
+        },
+        {
+            "connectionId": "rGGDIsUC8b9ADF-9YQBf7",
+            "name": "hcmus",
+            "driver": "postgres",
+            "connectionType": "host",
+            "host": "107.174.254.87",
+            "port": 5432,
+            "ssl": false,
+            "username": "postgres",
+            "password": "",
+            "savePassword": "secretStorage",
+            "database": "root",
+            "readOnly": false,
+            "connectionTimeout": 30
+        },
+        {
+            "connectionId": "CDX2GXfTXXUURY6vsZlDz",
+            "name": "cassandra",
+            "driver": "cassandra",
+            "host": "107.174.254.87",
+            "port": 9042,
+            "driverOptions": {
+                "localdatacenter": "cassandra"
+            },
+            "ssl": false,
+            "username": "cassandra",
+            "password": "",
+            "savePassword": "secretStorage",
+            "tunnelId": "host:hcmus",
+            "readOnly": false,
+            "connectionTimeout": 30,
+            "connectionType": "host"
+        }
+    ],
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false,
+        "sql": false
+    },
+    "[svelte]": {
+        "editor.defaultFormatter": "svelte.svelte-vscode"
+    },
+    "sherlock.userId": "5616f5aa-05db-40fd-a52d-c98634a3770a",
+    "dbcode.resultLocation": "panel",
+    "notebook.formatOnSave.enabled": true,
+    "explorer.confirmPasteNative": false,
+    "editor.minimap.enabled": false,
+    "python.analysis.typeCheckingMode": "standard",
+    "jupyter.interactiveWindow.creationMode": "perFile",
+    "chat.instructionsFilesLocations": {
+        ".github/instructions": true,
+        "/var/folders/ds/qgc7ldz113jb3ym8xw9kxxmh0000gn/T/postman-http-request-post-response.instructions.md": true,
+        "/var/folders/ds/qgc7ldz113jb3ym8xw9kxxmh0000gn/T/postman-http-request-pre-request.instructions.md": true,
+        "/var/folders/ds/qgc7ldz113jb3ym8xw9kxxmh0000gn/T/postman-collections-post-response.instructions.md": true,
+        "/var/folders/ds/qgc7ldz113jb3ym8xw9kxxmh0000gn/T/postman-collections-pre-request.instructions.md": true,
+        "/var/folders/ds/qgc7ldz113jb3ym8xw9kxxmh0000gn/T/postman-folder-post-response.instructions.md": true,
+        "/var/folders/ds/qgc7ldz113jb3ym8xw9kxxmh0000gn/T/postman-folder-pre-request.instructions.md": true,
+        "/var/folders/2l/9sz6cxjd441dtlq76xtcpv6h0000gn/T/postman-collections-post-response.instructions.md": true,
+        "/var/folders/2l/9sz6cxjd441dtlq76xtcpv6h0000gn/T/postman-collections-pre-request.instructions.md": true,
+        "/var/folders/2l/9sz6cxjd441dtlq76xtcpv6h0000gn/T/postman-folder-post-response.instructions.md": true,
+        "/var/folders/2l/9sz6cxjd441dtlq76xtcpv6h0000gn/T/postman-folder-pre-request.instructions.md": true,
+        "/var/folders/2l/9sz6cxjd441dtlq76xtcpv6h0000gn/T/postman-http-request-post-response.instructions.md": true,
+        "/var/folders/2l/9sz6cxjd441dtlq76xtcpv6h0000gn/T/postman-http-request-pre-request.instructions.md": true
+    },
+    "editor.formatOnSaveMode": "modificationsIfAvailable",
+    "dbcode.tunnels": [
+        {
+            "id": "Zwf_UlK0tsDjneKep74HP",
+            "type": "ssh",
+            "name": "Cassandra",
+            "host": "107.174.254.87",
+            "port": 9042,
+            "username": "cassandra",
+            "authType": "password",
+            "password": "",
+            "savePassword": "secretStorage"
+        }
+    ],
+    "workbench.activityBar.location": "hidden",
+    "workbench.secondarySideBar.defaultVisibility": "hidden",
 }
